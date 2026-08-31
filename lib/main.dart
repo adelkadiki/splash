@@ -1,6 +1,4 @@
 import 'package:chatapp/screens/auth.dart';
-import 'package:chatapp/screens/bottom_to_top_reveal.dart';
-import 'package:chatapp/screens/simple_animate.dart';
 import 'package:chatapp/screens/splash_framed_reveal.dart';
 import 'package:flutter/material.dart';
 
