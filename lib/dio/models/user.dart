@@ -162,33 +162,18 @@ class Geo {
   final String lat;
   final String lng;
 
-  Geo({
-    required this.lat,
-    required this.lng,
-  });
+  Geo({required this.lat, required this.lng});
 
   factory Geo.fromJson(Map<String, dynamic> json) {
-    return Geo(
-      lat: json['lat'] as String,
-      lng: json['lng'] as String,
-    );
+    return Geo(lat: json['lat'] as String, lng: json['lng'] as String);
   }
 
   Map<String, dynamic> toJson() {
-    return {
-      'lat': lat,
-      'lng': lng,
-    };
+    return {'lat': lat, 'lng': lng};
   }
 
-  Geo copyWith({
-    String? lat,
-    String? lng,
-  }) {
-    return Geo(
-      lat: lat ?? this.lat,
-      lng: lng ?? this.lng,
-    );
+  Geo copyWith({String? lat, String? lng}) {
+    return Geo(lat: lat ?? this.lat, lng: lng ?? this.lng);
   }
 
   @override
@@ -199,9 +184,7 @@ class Geo {
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
-    return other is Geo &&
-        other.lat == lat &&
-        other.lng == lng;
+    return other is Geo && other.lat == lat && other.lng == lng;
   }
 
   @override

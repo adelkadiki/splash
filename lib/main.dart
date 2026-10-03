@@ -9,7 +9,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,10 +16,15 @@ class MyApp extends StatelessWidget {
       theme: ThemeData().copyWith(
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color.from(alpha: 255, red: 63, green: 17, blue: 177))
-      ) ,
-      home: SplashFramedReveal()
+          seedColor: const Color.from(
+            alpha: 255,
+            red: 63,
+            green: 17,
+            blue: 177,
+          ),
+        ),
+      ),
+      home: SplashFramedReveal(),
     );
   }
 }
-

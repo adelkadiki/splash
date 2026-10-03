@@ -33,31 +33,28 @@ class _SplashFramedRevealState extends State<SplashFramedReveal> {
                     Expanded(
                       child: _isCoverGone
                           ? Image.asset(
-                              'assets/images/chat-image.png',
-                              fit: BoxFit.contain,
-                            )
-                              .animate()
-                              // Step 1: Fade In immediately upon mounting
-                              .fadeIn(
-                                duration: 500.ms,
-                                curve: Curves.easeIn,
-                              )
-                              .then()
-                              // Step 2: Strong upward launch (-60px up)
-                              .moveY(
-                                begin: 0,
-                                end: -60,
-                                duration: 350.ms,
-                                curve: Curves.easeOut,
-                              )
-                              .then()
-                              // Step 3: Bounce back DOWN to rest position
-                              .moveY(
-                                begin: -60,
-                                end: 0,
-                                duration: 650.ms,
-                                curve: Curves.bounceOut,
-                              )
+                                  'assets/images/chat-image.png',
+                                  fit: BoxFit.contain,
+                                )
+                                .animate()
+                                // Step 1: Fade In immediately upon mounting
+                                .fadeIn(duration: 500.ms, curve: Curves.easeIn)
+                                .then()
+                                // Step 2: Strong upward launch (-60px up)
+                                .moveY(
+                                  begin: 0,
+                                  end: -60,
+                                  duration: 350.ms,
+                                  curve: Curves.easeOut,
+                                )
+                                .then()
+                                // Step 3: Bounce back DOWN to rest position
+                                .moveY(
+                                  begin: -60,
+                                  end: 0,
+                                  duration: 650.ms,
+                                  curve: Curves.bounceOut,
+                                )
                           : const SizedBox.shrink(), // Keeps space empty while cover is sliding
                     ),
 
@@ -75,9 +72,7 @@ class _SplashFramedRevealState extends State<SplashFramedReveal> {
               // 2. SECOND STACK CHILD: White sliding container
               if (!_isCoverGone)
                 Positioned.fill(
-                  child: Container(
-                    color: Colors.white,
-                  )
+                  child: Container(color: Colors.white)
                       .animate(
                         onComplete: (controller) {
                           // Guaranteed to execute ONLY after the slide finishes 100%
@@ -171,4 +166,3 @@ class _SplashFramedRevealState extends State<SplashFramedReveal> {
 //     );
 //   }
 // }
-
