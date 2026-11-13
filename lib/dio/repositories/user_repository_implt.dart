@@ -35,6 +35,8 @@ class UserRepositoryImplt implements UserRepository {
     }
   }
 
+  // DELETE USER METHOD
+
   @override
   Future<void> deleteUser(int id) async {
     try {
@@ -46,7 +48,7 @@ class UserRepositoryImplt implements UserRepository {
     }
   }
 
-  // Get a User method
+  // GET USER METHOD
   @override
   Future<User> getUser(int id) async {
     try {
@@ -66,7 +68,7 @@ class UserRepositoryImplt implements UserRepository {
     }
   }
 
-  // Get all users method
+  // GET ALL USERS
   @override
   Future<List<User>> getUsers() async {
     try {
@@ -87,7 +89,7 @@ class UserRepositoryImplt implements UserRepository {
     }
   }
 
-  // Update user method
+  // UPDATE USER METHOD
   @override
   Future<User> updateUser(User user) async {
     try {
@@ -118,7 +120,7 @@ class UserRepositoryImplt implements UserRepository {
     );
   }
 
-  // USer login
+  // User login
   @override
   Future<User> login({
     required String username,

@@ -29,6 +29,7 @@ class DioClient {
           },
         ),
       ) {
+    // Constructor body
     _dio.interceptors.add(
       InterceptorsWrapper(
         onRequest: (options, handerls) async {

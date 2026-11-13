@@ -37,6 +37,7 @@ dependencies:
   flutter_animate: ^4.5.2
   dio: ^5.11.0
   flutter_secure_storage: ^11.2.0
+  provider: ^6.1.5+1
 
 dev_dependencies:
   flutter_test:
